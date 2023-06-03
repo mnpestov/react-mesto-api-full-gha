@@ -1,0 +1,6 @@
+.popup__registred {
+    display: grid;
+    place-items: center;
+    row-gap: 40px;
+    padding: 60px 80px;
+}

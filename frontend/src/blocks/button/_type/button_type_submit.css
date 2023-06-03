@@ -1,0 +1,25 @@
+.button_type_submit {
+    width: 358px;
+    height: 50px;
+    margin: 15px auto 36px;
+    border-radius: 2px;
+    border: none;
+    font-family: 'Inter', Verdana, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  @media screen and (max-width: 767px) {
+    .button_type_submit {
+      /* width: 100%; */
+      height: 46px;
+      font-size: 14px;
+      line-height: 17px;
+      margin-top: 16px;
+      width: max(83.25581%,238px);
+    }
+  }

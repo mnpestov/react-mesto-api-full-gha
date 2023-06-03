@@ -1,0 +1,9 @@
+.popup__text-registred {
+    font-family: 'Inter', 'Verdana', sans-serif;
+    font-weight: 900;
+    font-size: 20px;
+    line-height: 1.2;
+    color: #000;
+    margin: 0;
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+.popup__container {
+  width: 430px;
+  min-height: 330px;
+  margin: auto;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+  align-items: center;
+}
+
+@media screen and (max-width: 767px) {
+  .popup__container {
+    width: clamp(282px, calc(282/320*100vw), 430px);
+    /* min-height: 322px; */
+  }
+}

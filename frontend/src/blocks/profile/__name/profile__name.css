@@ -1,0 +1,27 @@
+.profile__name {
+  margin: 0;
+  font-family: 'Inter', Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: min(508px, calc(68.75vw * .45));
+}
+
+@media screen and (max-width: 1023px) {
+  .profile__name {
+    max-width: max(240px, 64vw);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profile__name {
+    font-size: max(27px, 5.4vw);
+    line-height: max(33px, 6.25vw);
+    margin: 0 0px 6px 26px;
+  }
+}

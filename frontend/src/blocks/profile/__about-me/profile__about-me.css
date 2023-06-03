@@ -1,0 +1,29 @@
+.profile__about-me {
+  margin: 0;
+  font-family: 'Inter', Verdana, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #fff;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: min(508px, calc(68.75vw * .45));
+}
+
+@media screen and (max-width: 1023px) {
+  .profile__about-me {
+    grid-column-start: span 2;
+    justify-self: center;
+    max-width: max(282px, 69vw);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .profile__about-me {
+    font-size: max(14px, 2.3vw);
+    line-height: max(17px, 2.8vw);
+    margin: 0 auto;
+  }
+}

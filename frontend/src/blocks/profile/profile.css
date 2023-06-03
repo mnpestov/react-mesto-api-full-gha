@@ -1,0 +1,13 @@
+.profile {
+    display: grid;
+    grid-template-columns: repeat(2, max-content) auto;
+    gap: 30px;
+}
+
+@media screen and (max-width: 1023px) {
+  .profile {
+    grid-template-columns: max-content;
+    justify-content: center;
+    gap: 27px;
+  }
+}

@@ -1,0 +1,19 @@
+.element__image {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    height: min((calc(282/880*68.75vw)), 282px);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1023px) {
+  .element__image {
+    height: min(calc(343.5/704*88vw), 343.5px);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .element__image {
+    height: max(calc(594/675*100vw), 282px);
+  }
+}

@@ -1,0 +1,13 @@
+.button_type_login {
+    width: 100%;
+    height: 50px;
+    margin: 216px auto 112px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    color: #000000;
+}

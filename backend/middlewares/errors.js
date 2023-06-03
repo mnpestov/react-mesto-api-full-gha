@@ -16,6 +16,9 @@ module.exports = ((err, req, res, next) => {
   } else if (err.message === 'unauthorized') {
     res.status(httpConstants.HTTP_STATUS_UNAUTHORIZED)
       .send({ message: 'Необходима авторизация' });
+  } else if (err.name === 'TokenExpiredError') {
+    res.status(httpConstants.HTTP_STATUS_UNAUTHORIZED)
+      .send({ message: 'Необходима авторизация' });
   } else if (err.name === 'ValidationError') {
     res.status(httpConstants.HTTP_STATUS_BAD_REQUEST)
       .send({ message: 'Ошибка валидации полей' });

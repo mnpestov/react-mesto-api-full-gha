@@ -1,4 +1,3 @@
-// const httpConstants = require('http2').constants;
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');

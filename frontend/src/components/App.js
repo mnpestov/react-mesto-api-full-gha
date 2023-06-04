@@ -125,7 +125,7 @@ function App() {
   }, [jwt])
 
   function handleCardLike(card) {
-    // Проверяем, есть ли уже лайк на этой карточке
+    // Проверяем, есть ли уже лайк на этой карточке 
     const isLiked = card.likes.some(i => i._id === currentUser._id);
 
     // Отправляем запрос в API и получаем обновлённые данные карточки

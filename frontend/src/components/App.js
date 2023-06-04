@@ -216,7 +216,7 @@ function App() {
               onAddPlace={handleAddPlaceClick}
               onCardClick={handleCardClick}>
             </ProtectedRoute>
-            <Route path='/sign-up'>
+            <Route path='/signup'>
               <Register
                 setIsLoginForm={setIsLoginForm}
                 isLoggedIn={loggedIn}
@@ -226,7 +226,7 @@ function App() {
                 isRegisterOk={isRegisterOk}
               />
             </Route>
-            <Route path='/sign-in'>
+            <Route path='/signin'>
               <Login
                 setIsLoginForm={setIsLoginForm}
                 isLoggedIn={loggedIn}

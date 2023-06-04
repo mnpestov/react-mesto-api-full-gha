@@ -17,13 +17,13 @@ function Header({ email, isLoggedIn, handleLogout, isLoginForm }) {
                 >
                     {isLoggedIn ? "Выйти" : isLoginForm ? "Регистрация" : "Войти"}
                 </button>)}
-                {location.pathname === '/sign-in' && (
-                    <Link to="/sign-up" className="button header__menu header__menu_unlogined  opacity-transition opacity-transition_type_medium">
+                {location.pathname === '/signin' && (
+                    <Link to="/signup" className="button header__menu header__menu_unlogined  opacity-transition opacity-transition_type_medium">
                         Регистрация
                     </Link>
                 )}
-                {location.pathname === '/sign-up' && (
-                    <Link to="/sign-in" className="button header__menu header__menu_unlogined  opacity-transition opacity-transition_type_medium">
+                {location.pathname === '/signup' && (
+                    <Link to="/signin" className="button header__menu header__menu_unlogined  opacity-transition opacity-transition_type_medium">
                         Войти
                     </Link>
                 )}

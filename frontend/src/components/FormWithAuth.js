@@ -1,7 +1,6 @@
 import React from "react";
 
 function FormWithAuth({ userData, handleChange, handelSubmit, title, buttonText }) {
-    //console.log(userData);
     return (
         <form className="login__form" onSubmit={handelSubmit}>
             <label className="login__inputs">

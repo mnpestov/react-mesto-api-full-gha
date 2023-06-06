@@ -28,7 +28,7 @@ function Register({ isRegisterOk, setIsLoginForm, isLoggedIn, onRegister, title,
         onRegister(userData.username, userData.password);
     }
     if (isRegisterOk) { 
-        return <Redirect to="/sign-in" />
+        return <Redirect to="/signin" />
     }
     return (
         <FormWithAuth userData={userData} handleChange={handleChange} handelSubmit={handelSubmit} title={title} buttonText={buttonText} />

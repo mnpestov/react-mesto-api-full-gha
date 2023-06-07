@@ -9,7 +9,7 @@
 
 ## Ссылки на проект
 
-IP-адрес IP: 158.160.60.186
+IP-адрес IP 158.160.60.186
 
 Frontend https://mnpestov.nomoredomains.rocks
 

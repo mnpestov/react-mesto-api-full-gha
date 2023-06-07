@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.60.186
 
-Frontend https://...
+Frontend https://mnpestov.nomoredomains.rocks
 
-Backend https://...
+Backend https://api.mnpestov.nomoredomains.rocks

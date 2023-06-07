@@ -33,7 +33,7 @@ function App() {
     isOpened: false,
     resOk: false
   });
-  let jwt = localStorage.getItem('jwt');
+  // let jwt = localStorage.getItem('jwt');
 
   const cbAuthenticate = useCallback((data) => {
     localStorage.setItem('jwt', data.token);
@@ -50,15 +50,14 @@ function App() {
       if (!user) {
         throw new Error('invalid user')
       }
-
       if (user) {
         setLoggedIn(true);
-        setUserEmail(user.data.email)
+        setUserEmail(user.email)
       }
     } catch(err) {
       console.log('Ошибка: ' + err)
     }
-  }, [loggedIn])
+  }, [])
 
 
   const cbLogin = useCallback(async (login, password) => {
@@ -106,7 +105,7 @@ function App() {
 
   useEffect(() => {
     checkToken();
-  }, [checkToken])
+  }, [checkToken, loggedIn])
 
   useEffect(() => {
     if (loggedIn) {
@@ -122,7 +121,7 @@ function App() {
         .catch(err => console.log('Ошибка', err));
     }
 
-  }, [jwt])
+  }, [loggedIn])
 
   function handleCardLike(card) {
     // Проверяем, есть ли уже лайк на этой карточке 

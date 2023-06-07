@@ -1,8 +1,6 @@
 class Api {
     constructor(options) {
         this._baseUrl = options.baseUrl;
-        // this._headers = options.headers;
-        // this._authorization = options.headers.authorization;
     }
 
     _checkResponse(res) {
@@ -130,12 +128,7 @@ class Api {
 const api = new Api(
     {
         // baseUrl: 'http://localhost:3000',
-        // baseUrl: 'https://mesto.nomoreparties.co/v1/cohort-51',
         baseUrl: 'https://api.mnpestov.nomoredomains.rocks',
-        // headers: {
-        //     authorization: '3d5cca3f-8a8e-42db-8df2-befb64932740',
-        //     'Content-Type': 'application/json'
-        // }
     }
 );
 

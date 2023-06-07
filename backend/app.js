@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -11,11 +12,20 @@ const auth = require('./middlewares/auth');
 const errorHandler = require('./middlewares/errors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-const { PORT = 3000 } = process.env;
+const { PORT = 3000 } = process.env.PORT;
 const app = express();
 
 app.use(cors());
 app.use(requestLogger);
+
+// Код для проведения краш-теста
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+// Код для проведения краш-теста
+
 app.post('/signin', express.json(), celebrate({
   body: Joi.object().keys({
     email: Joi.string().required().email(),

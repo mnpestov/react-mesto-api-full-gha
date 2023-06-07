@@ -7,7 +7,6 @@ const UnauthorizedError = require('../errors/unauthorized-erros');
 const ConflictError = require('../errors/conflict-errors');
 
 const SOLT_ROUNDS = 10;
-const JWT_SOLT = 'wotj21ds0f7!hjhjh^';
 
 exports.getUsers = async (req, res, next) => {
   try {
@@ -53,7 +52,7 @@ exports.login = async (req, res, next) => {
     if (!matched) {
       throw new UnauthorizedError('wrong login or password');
     }
-    const token = jwt.sign({ _id: user._id }, JWT_SOLT, { expiresIn: '7d' });
+    const token = jwt.sign({ _id: user._id }, process.env.NODE_ENV === 'production' ? process.env.JWT_SOLT : 'dev-secret', { expiresIn: '7d' });
     res.status(httpConstants.HTTP_STATUS_OK)
       .send({ token });
   } catch (err) {
